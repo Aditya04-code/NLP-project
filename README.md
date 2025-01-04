@@ -1,14 +1,58 @@
-# NLP-project
-In this project we will be attempting to classify Yelp Reviews into 1 star or 5 star categories based off the text content in the reviews.we will also utilize the pipeline methods for more complex tasks.
+# Natural Language Processing Project
 
-We have used the [Yelp Review Data Set from Kaggle](https://www.kaggle.com/c/yelp-recsys-2013).
+## Project Overview  
+Welcome to the **Natural Language Processing (NLP)** project! In this project, we will be classifying Yelp reviews into **1-star** or **5-star** categories based on the content of the reviews. The objective is to demonstrate the application of NLP techniques to classify reviews, and we will leverage **Pipeline Methods** for this task, which simplifies the implementation of more complex NLP tasks.
 
-Each observation in this dataset is a review of a particular business by a particular user.
+We will be using the **Yelp Review Dataset** available on **Kaggle**. The dataset contains various reviews by Yelp users about businesses.
 
-The "stars" column is the number of stars (1 through 5) assigned by the reviewer to the business. (Higher stars is better.) In other words, it is the rating of the business by the person who wrote the review.
+## Dataset Description  
+The **Yelp Review Dataset** consists of various columns, including:
 
-The "cool" column is the number of "cool" votes this review received from other Yelp users. 
+- **stars**: The number of stars (ranging from 1 to 5) given by the reviewer to the business. Higher stars indicate better reviews.
+- **cool**: The number of "cool" votes this review received from other Yelp users. This column reflects the rating of the review itself, not the business.
+- **useful**: The number of "useful" votes this review received, indicating how helpful the review is to others.
+- **funny**: The number of "funny" votes the review received, showing how amusing the review is perceived by other users.
 
-All reviews start with 0 "cool" votes, and there is no limit to how many "cool" votes a review can receive. In other words, it is a rating of the review itself, not a rating of the business.
+The task is to classify reviews into either **1-star** or **5-star** categories based on the text content.
 
-The "useful" and "funny" columns are similar to the "cool" column.
+## Objective  
+The main goal of this project is to:
+
+- Process Yelp reviews using Natural Language Processing (NLP) techniques.
+- Perform classification of reviews into **1-star** or **5-star** categories based on the review text.
+- Use machine learning models for text classification and evaluate their performance.
+
+## Methodology  
+1. **Data Preprocessing**:  
+   The first step is cleaning the text data by removing stopwords, special characters, and performing other text cleaning tasks like stemming and lemmatization.
+
+2. **Feature Extraction**:  
+   We will extract useful features from the text data using methods like **TF-IDF** (Term Frequency-Inverse Document Frequency), which transforms the raw text data into numerical features for the model.
+
+3. **Model Building**:  
+   A classification model (e.g., **Logistic Regression**, **Naive Bayes**, or **SVM**) will be built using the features extracted from the text. A **Pipeline** will be used to streamline the process of vectorizing the text data, training the model, and making predictions.
+
+4. **Evaluation**:  
+   The model will be evaluated using standard classification metrics like **Accuracy**, **Precision**, **Recall**, and **F1-Score**.
+
+## Technologies Used  
+- **Python**  
+- **Pandas** (for data manipulation)  
+- **Scikit-learn** (for machine learning and text processing)  
+- **Natural Language Toolkit (NLTK)** or **spaCy** (for text processing)  
+- **Matplotlib / Seaborn** (for data visualization)
+
+## How It Works  
+1. The dataset is loaded from Kaggle, which contains Yelp reviews and associated metadata.
+2. We clean and preprocess the reviews (remove stopwords, punctuation, etc.).
+3. We convert the text data into numerical format using **TF-IDF** or **CountVectorizer**.
+4. We train a classification model on the preprocessed text data.
+5. The model classifies each review into either **1-star** or **5-star** categories.
+
+## Results  
+The model achieved a decent level of accuracy in classifying reviews into **1-star** or **5-star** categories. Future improvements could include trying different classification algorithms, tuning hyperparameters, or performing sentiment analysis to gain deeper insights into the reviews.
+
+## How to Run  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aditya04-code/nlp-yelp-reviews.git
